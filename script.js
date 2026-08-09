@@ -7,3 +7,7 @@ function Book(title, author, page, id, status) {
     this.id = id;
     this.status = status;
 }
+
+Book.prototype.changeStatus = function() {
+    this.status = !this.status
+}
