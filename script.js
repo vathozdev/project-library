@@ -19,3 +19,11 @@ form.addEventListener("submit", (event) => {
     const formData = new FormData(form);
     const formValues = Object.fromEntries(formData);
 });
+
+function addBookToLibrary() {
+
+const id = crypto.randomUUID()
+
+myLibrary.push(new Book(formValues.title, formValues.author, Number(formValues.page),id));
+
+}
