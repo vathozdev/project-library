@@ -26,3 +26,6 @@ const id = crypto.randomUUID()
 myLibrary.push(new Book(formValues.title, formValues.author, Number(formValues.page),id));
 
 }
+function displayBooks() {
+    
+}
