@@ -1,13 +1,12 @@
 const myLibrary = [];
 
-function Book(title, author, page, id, status) {
+function Book(title, author, page, id) {
     this.title = title;
     this.author = author;
     this.page = page;
     this.id = id;
-    this.status = status;
+    this.status = false;
 }
-
 Book.prototype.changeStatus = function() {
     this.status = !this.status
 }
