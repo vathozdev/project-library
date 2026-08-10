@@ -31,7 +31,7 @@ function displayBooks() {
         container.appendChild(table)
     const thead = document.createElement("thead");
         table.appendChild(thead);
-    const (book of myLibrary) {
+    for (book of myLibrary) {
         const newRow = document.createElement("tr");
             for (let i = 0; i <= 6; i++) {
                 const cell = document.createElement("td");
