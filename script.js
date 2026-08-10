@@ -27,5 +27,16 @@ myLibrary.push(new Book(formValues.title, formValues.author, Number(formValues.p
 
 }
 function displayBooks() {
-    
+    const table = document.createElement("table");
+        container.appendChild(table)
+    const thead = document.createElement("thead");
+        table.appendChild(thead);
+    const (book of myLibrary) {
+        const newRow = document.createElement("tr");
+            for (let i = 0; i <= 6; i++) {
+                const cell = document.createElement("td");
+                newRow.appendChild(cell);
+            }
+        table.appendChild(newRow)
+    } 
 }
