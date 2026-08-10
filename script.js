@@ -31,12 +31,12 @@ function displayBooks() {
         container.appendChild(table)
     const thead = document.createElement("thead");
         table.appendChild(thead);
-    for (book of myLibrary) {
+    const tbody = document.createElement("tbody");
+        table.appendChild(tbody);
+    for (const book of myLibrary) {
         const newRow = document.createElement("tr");
-            for (let i = 0; i <= 6; i++) {
-                const cell = document.createElement("td");
-                newRow.appendChild(cell);
-            }
-        table.appendChild(newRow)
-    } 
-}
+        const cell = document.createElement("td");
+            newRow.appendChild(cell);
+            tbody.appendChild(newRow);
+      }
+} 
