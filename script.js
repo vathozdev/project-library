@@ -12,7 +12,7 @@ Book.prototype.changeStatus = function() {
 }
 const form = document.querySelector("form");
 
-form.addEventListener("submit", (event) => {
+form.addEventListener("submit", (event) => { // I'll add a behaviour for displaying books each time user submit - for updating.//
     event.preventDefault();
 
     const formData = new FormData(form);
