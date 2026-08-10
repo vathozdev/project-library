@@ -27,10 +27,22 @@ myLibrary.push(new Book(formValues.title, formValues.author, Number(formValues.p
 
 }
 const table = document.createElement("table");
-    container.appendChild(table);
+container.appendChild(table);
 
 const thead = document.createElement("thead");
-    table.appendChild(thead);
+table.appendChild(thead);
+
+const theadRow = document.createElement("tr");
+thead.appendChild(theadRow);
+
+const headers = ["Title", "Author", "Pages", "ID", "Status", "Actions"];
+
+headers.forEach((header) => {
+    const eachData = document.createElement("th");
+    eachData.textContent = header;
+    theadRow.appendChild(eachData);
+});
+
 const tbody = document.createElement("tbody");
     table.appendChild(tbody);
 
