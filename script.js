@@ -26,16 +26,16 @@ const id = crypto.randomUUID()
 myLibrary.push(new Book(formValues.title, formValues.author, Number(formValues.page),id));
 
 }
-function displayBooks() {
-    const table = document.createElement("table");
+const table = document.createElement("table");
     container.appendChild(table);
 
-    const thead = document.createElement("thead");
+const thead = document.createElement("thead");
     table.appendChild(thead);
-
-    const tbody = document.createElement("tbody");
+const tbody = document.createElement("tbody");
     table.appendChild(tbody);
 
+function displayBooks() {
+    tbody.replaceChildren();
     for (const book of myLibrary) {
         const newRow = document.createElement("tr");
 
