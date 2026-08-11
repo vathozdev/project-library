@@ -113,7 +113,10 @@ function displayBooks() {
         cell6.appendChild(removeBtn);
 
         const toggleButton = document.createElement("button");
-        toggleButton.textContent = "READ";
+        if (book.status === true ) {
+             toggleButton.textContent = "UNREAD";
+        } else {toggleButton.textContent = "READ";}
+       
         toggleButton.dataset.bookId = bookId;
 
         toggleButton.addEventListener("click", () => {
