@@ -100,6 +100,13 @@ function displayBooks() {
     }
 }
 removeBtn.addEventListener("click", (event)=> {
+const clickedBtnId = removeBtn.dataset.bookId;
 
+const filteredArr = myLibrary.filter(
+    (book) => book.id !== clickedBtnId
+);
+myLibrary.length = 0;
+myLibrary.push(...filteredArr);
 
+displayBooks();
 });
