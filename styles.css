@@ -5,13 +5,24 @@
 body {
     margin: 0;
     min-height: 100vh;
+    position: relative;
+    color: #3b2818;
+    font-family: Georgia, "Times New Roman", serif;
+}
+
+body::before {
+    content: "";
+    position: fixed;
+    inset: 0;
+
     background-image: url("./images/bg-library.jpg");
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
 
-    color: #3b2818;
-    font-family: Georgia, "Times New Roman", serif;
+    opacity: 0.65;
+
+    z-index: -1;
 }
 .container {
     width: min(1100px, 90%);
