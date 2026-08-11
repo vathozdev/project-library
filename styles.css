@@ -26,3 +26,10 @@ body {
     font-weight: bold; 
     cursor: pointer; 
     box-shadow: 4px 4px 0 #3b2818; }
+
+#add-book:hover { 
+    background: #7d4d2d; } 
+    
+#add-book:active { 
+    transform: translate(2px, 2px); 
+    box-shadow: 2px 2px 0 #3b2818; }
