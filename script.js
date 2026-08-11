@@ -27,6 +27,7 @@ form.addEventListener("submit", (event) => {
     const formValues = Object.fromEntries(formData);
     addBookToLibrary(formValues);
     displayBooks();
+    form.reset();
     form.style.display = "none";
 });
 
