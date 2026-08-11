@@ -134,11 +134,13 @@ function displayBooks() {
         const toggleButton = document.createElement('button');
         toggleButton.textContent = "READ"
         toggleButton.dataset.bookId = bookId;
-        
+        toggleButton.addEventListener("click", ()=> {
+            const bookToToggle = myLibrary.find((book) => book.id === toggleButton.dataset.bookId);
+            bookToToggle.changeStatus();
+            displayBooks();
+        })
         cell6.appendChild(toggleButton);
-
         newRow.appendChild(cell6);
-
         tbody.appendChild(newRow);
     }
 
