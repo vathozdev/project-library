@@ -5,11 +5,13 @@
 body {
     margin: 0;
     min-height: 100vh;
-    background: #d8c59a;
+    background-image: url("./images/bg-library.jpg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
     color: #3b2818;
     font-family: Georgia, "Times New Roman", serif;
 }
-
 .container {
     width: min(1100px, 90%);
     margin: 50px auto;
