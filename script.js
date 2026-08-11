@@ -106,6 +106,11 @@ function displayBooks() {
             displayBooks();
             });
         cell6.appendChild(removeBtn);
+        const toggleButton = document.createElement('button');
+        toggleButton.setAttribute('role', 'switch');
+        toggleButton.setAttribute('aria-checked', 'false');
+        cell6.appendChild(toggleButton);
+
         newRow.appendChild(cell6);
 
         tbody.appendChild(newRow);
