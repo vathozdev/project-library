@@ -15,3 +15,14 @@ body {
     margin: 50px auto;
     text-align: center;
 }
+#add-book { 
+    padding: 12px 22px; 
+    background: #6b4226; 
+    color: #f5e8c8; 
+    border: 3px solid #3b2818; 
+    border-radius: 4px; 
+    font-family: Georgia, "Times New Roman", serif; 
+    font-size: 18px; 
+    font-weight: bold; 
+    cursor: pointer; 
+    box-shadow: 4px 4px 0 #3b2818; }
