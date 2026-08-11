@@ -20,14 +20,16 @@ Book.prototype.changeStatus = function() {
 }
 const form = document.querySelector("form");
 
-form.addEventListener("submit", (event) => { // I'll add a behaviour for displaying books each time user submit - for updating.//
+form.addEventListener("submit", (event) => { 
     event.preventDefault();
 
     const formData = new FormData(form);
     const formValues = Object.fromEntries(formData);
+    addBookToLibrary(formValues);
+    displayBooks();
 });
 
-function addBookToLibrary() {
+function addBookToLibrary(formValues) {
 
 const id = crypto.randomUUID()
 
