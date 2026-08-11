@@ -108,10 +108,37 @@ function displayBooks() {
         cell6.appendChild(removeBtn);
         const toggleButton = document.createElement('button');
         toggleButton.textContent = "READ"
+        toggleButton.dataset.bookId = bookId;
+        toggleButton.addEventListener("click",)
+        cell6.appendChild(toggleButton);
+
+        newRow.appendChild(cell6);
+
+        tbody.appendChild(newRow);
+    }        const removeBtn = document.createElement("button");
+        removeBtn.textContent = "REMOVE";
+        const bookId = book.id;
+        removeBtn.dataset.bookId = bookId;
+        removeBtn.addEventListener("click", (event)=> {
+            const clickedBtnId = removeBtn.dataset.bookId;
+
+            const filteredArr = myLibrary.filter(
+                (book) => book.id !== clickedBtnId
+            );
+            myLibrary.length = 0;
+            myLibrary.push(...filteredArr);
+
+            displayBooks();
+            });
+        cell6.appendChild(removeBtn);
+        const toggleButton = document.createElement('button');
+        toggleButton.textContent = "READ"
+        toggleButton.dataset.bookId = bookId;
+        
         cell6.appendChild(toggleButton);
 
         newRow.appendChild(cell6);
 
         tbody.appendChild(newRow);
     }
-}
+
