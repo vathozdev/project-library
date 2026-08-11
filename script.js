@@ -107,8 +107,7 @@ function displayBooks() {
             });
         cell6.appendChild(removeBtn);
         const toggleButton = document.createElement('button');
-        toggleButton.setAttribute('role', 'switch');
-        toggleButton.setAttribute('aria-checked', 'false');
+        toggleButton.textContent = "READ"
         cell6.appendChild(toggleButton);
 
         newRow.appendChild(cell6);
