@@ -234,13 +234,19 @@ form button[type="submit"]:hover {
 #cancel:hover {
     background: #8b2f24;
 }
+
 @media (max-width: 700px) {
     .logo {
         top: -25px;
         left: 5px;
         gap: 2px;
+        margin-top: 6px;
+        
     }
-
+    th:nth-child(4),
+    td:nth-child(4) {
+    display: none;
+    }
     .logo img {
         width: 100px;
         height: 100px;
@@ -255,12 +261,13 @@ form button[type="submit"]:hover {
         margin: 0 auto 50px;
         padding-top: 85px;
         text-align: center;
+        overflow-x: auto;
     }
 
     table {
-        display: block;
-        overflow-x: auto;
-        white-space: nowrap;
+        width: max-content;
+        min-width: 100%;
+        margin-top: 25px;
     }
 
     th,
@@ -310,8 +317,8 @@ form button[type="submit"]:hover {
     }
 
     table {
-        display: block;
-        overflow-x: auto;
-        white-space: nowrap;
+        width: max-content;
+        min-width: 100%;
     }
 }
+
