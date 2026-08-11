@@ -7,8 +7,10 @@ function Book(title, author, page, id) {
     this.id = id;
     this.status = false;
 }
-const addBookBtn = document.querySelector(#add-book)
-
+const addBookBtn = document.querySelector("#add-book")
+addBookBtn.addEventListener("click", () => {
+    form.style.display = "block";
+})
 
 Book.prototype.changeStatus = function() {
     this.status = !this.status
