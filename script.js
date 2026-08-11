@@ -99,3 +99,7 @@ function displayBooks() {
         tbody.appendChild(newRow);
     }
 }
+removeBtn.addEventListener("click", (event)=> {
+
+
+});
