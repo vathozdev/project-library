@@ -1,5 +1,17 @@
+* {
+    box-sizing: border-box;
+}
+body {
+    margin: 0;
+    min-height: 100vh;
 
+    background: #d8c59a;
+    color: #3b2818;
 
-form {
-    display: none;
+    font-family: Georgia, "Times New Roman", serif;
+}
+.container {
+    width: min(1100px, 90%);
+    margin: 50px auto;
+    text-align: center;
 }
