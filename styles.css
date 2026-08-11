@@ -176,3 +176,27 @@ form button[type="submit"] {
 form button[type="submit"]:hover {
     background: #7d4d2d;
 }
+
+#cancel {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    width: 32px;
+    height: 32px;
+    padding: 0;
+    background: #6b4226;
+    color: #f5e8c8;
+    border: 2px solid #3b2818;
+    font-family: Georgia, "Times New Roman", serif;
+    font-weight: bold;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+#cancel:hover {
+    background: #8b2f24;
+}
+
+
+
+
