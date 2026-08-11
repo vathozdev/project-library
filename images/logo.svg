@@ -1,0 +1,110 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" width="100" height="100">
+  <defs>
+    <!-- Parchment Color Gradient -->
+    <linearGradient id="parchmentBg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#f3e5c8" />
+      <stop offset="50%" stop-color="#e2cd9e" />
+      <stop offset="100%" stop-color="#cfb076" />
+    </linearGradient>
+
+    <!-- Edge Aging / Burn Gradient -->
+    <radialGradient id="edgeBurn" cx="50%" cy="50%" r="50%" fx="30%" fy="30%">
+      <stop offset="70%" stop-color="#000000" stop-opacity="0" />
+      <stop offset="95%" stop-color="#6a441e" stop-opacity="0.5" />
+      <stop offset="100%" stop-color="#3b2005" stop-opacity="0.8" />
+    </radialGradient>
+
+    <!-- Corner Curl Shadow -->
+    <linearGradient id="curlShadow" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#000000" stop-opacity="0.6" />
+      <stop offset="100%" stop-color="#000000" stop-opacity="0" />
+    </linearGradient>
+
+    <!-- Backside of Rolled Parchment -->
+    <linearGradient id="parchmentBack" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#ab8953" />
+      <stop offset="100%" stop-color="#805f32" />
+    </linearGradient>
+
+    <!-- Ancient Serif Font Definition -->
+    <style>
+      @import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@700&amp;display=swap');
+      .ancient-text {
+        font-family: 'Cinzel', 'Times New Roman', 'Georgia', serif;
+        font-size: 7.2px;
+        font-weight: 700;
+        letter-spacing: 0.9px;
+        fill: #1a0f05;
+        text-anchor: middle;
+      }
+    </style>
+  </defs>
+
+  <g transform="rotate(-2 50 50)">
+    <!-- Drop Shadow for Depth -->
+    <path d="M 11 26 
+             Q 28 23 48 25 Q 70 21 87 23 
+             L 88 64 
+             Q 78 68 70 78 
+             Q 52 75 32 78 Q 18 73 10 74 Z" 
+          fill="#000000" opacity="0.18" transform="translate(1.5, 2.5)" />
+
+    <!-- Main Aged Parchment Body -->
+    <path d="M 11 26 
+             C 18 27 25 24 33 25 
+             C 42 26 50 22 58 24 
+             C 67 22 76 25 87 23 
+             C 86 33 89 42 87 52 
+             C 88 57 86 61 88 64 
+             C 81 66 75 72 70 78 
+             C 61 76 52 78 43 76 
+             C 34 77 24 75 10 74 
+             C 12 63 9 52 11 41 
+             C 9 36 12 30 11 26 Z" 
+          fill="url(#parchmentBg)" 
+          stroke="#4a2e13" 
+          stroke-width="0.8" 
+          stroke-linejoin="round" />
+
+    <!-- Burned/Aged Overlay Tint -->
+    <path d="M 11 26 
+             C 18 27 25 24 33 25 
+             C 42 26 50 22 58 24 
+             C 67 22 76 25 87 23 
+             C 86 33 89 42 87 52 
+             C 88 57 86 61 88 64 
+             C 81 66 75 72 70 78 
+             C 61 76 52 78 43 76 
+             C 34 77 24 75 10 74 
+             C 12 63 9 52 11 41 
+             C 9 36 12 30 11 26 Z" 
+          fill="url(#edgeBurn)" />
+
+    <!-- Creases & Wear Lines -->
+    <path d="M 16 30 Q 25 38 20 48" fill="none" stroke="#6e4a27" stroke-width="0.4" opacity="0.35" />
+    <path d="M 75 28 Q 70 38 78 45" fill="none" stroke="#6e4a27" stroke-width="0.4" opacity="0.3" />
+    <path d="M 30 73 Q 35 62 28 58" fill="none" stroke="#6e4a27" stroke-width="0.4" opacity="0.25" />
+    <path d="M 12 41 C 18 40 22 43 28 41" fill="none" stroke="#523416" stroke-width="0.5" opacity="0.4" />
+
+    <!-- Bottom-Right Rolled Corner Shadow -->
+    <path d="M 70 78 C 73 73 80 67 88 64 Z" fill="url(#curlShadow)" />
+
+    <!-- Bottom-Right Rolled Corner (Backside) -->
+    <path d="M 70 78 
+             C 74 72 80 69 88 64 
+             C 82 72 77 77 70 78 Z" 
+          fill="url(#parchmentBack)" 
+          stroke="#3d230a" 
+          stroke-width="0.6" />
+
+    <!-- Text: BIBLIOTHECA -->
+    <!-- Crisp Dark Ink with Subtle Ink Bleed Shadow -->
+    <text x="48.5" y="52.2" class="ancient-text" opacity="0.25" fill="#000">BIBLIOTHECA</text>
+    <text x="48" y="51.8" class="ancient-text">BIBLIOTHECA</text>
+
+    <!-- Subtle Stains / Aging Spots -->
+    <circle cx="28" cy="36" r="2.5" fill="#5c3a18" opacity="0.12" />
+    <circle cx="68" cy="60" r="3.5" fill="#42250c" opacity="0.1" />
+    <circle cx="72" cy="34" r="1.8" fill="#5c3a18" opacity="0.15" />
+  </g>
+</svg>
