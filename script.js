@@ -60,6 +60,7 @@ const tbody = document.createElement("tbody");
 
 function displayBooks() {
     tbody.replaceChildren();
+
     for (const book of myLibrary) {
         const newRow = document.createElement("tr");
 
@@ -90,57 +91,43 @@ function displayBooks() {
 
         const cell6 = document.createElement("td");
 
+        const bookId = book.id;
+
         const removeBtn = document.createElement("button");
         removeBtn.textContent = "REMOVE";
-        const bookId = book.id;
         removeBtn.dataset.bookId = bookId;
-        removeBtn.addEventListener("click", (event)=> {
+
+        removeBtn.addEventListener("click", () => {
             const clickedBtnId = removeBtn.dataset.bookId;
 
             const filteredArr = myLibrary.filter(
                 (book) => book.id !== clickedBtnId
             );
+
             myLibrary.length = 0;
             myLibrary.push(...filteredArr);
 
             displayBooks();
-            });
+        });
+
         cell6.appendChild(removeBtn);
-        const toggleButton = document.createElement('button');
-        toggleButton.textContent = "READ"
+
+        const toggleButton = document.createElement("button");
+        toggleButton.textContent = "READ";
         toggleButton.dataset.bookId = bookId;
-        toggleButton.addEventListener("click",)
-        cell6.appendChild(toggleButton);
 
-        newRow.appendChild(cell6);
-
-        tbody.appendChild(newRow);
-    }        const removeBtn = document.createElement("button");
-        removeBtn.textContent = "REMOVE";
-        const bookId = book.id;
-        removeBtn.dataset.bookId = bookId;
-        removeBtn.addEventListener("click", (event)=> {
-            const clickedBtnId = removeBtn.dataset.bookId;
-
-            const filteredArr = myLibrary.filter(
-                (book) => book.id !== clickedBtnId
+        toggleButton.addEventListener("click", () => {
+            const bookToToggle = myLibrary.find(
+                (book) => book.id === toggleButton.dataset.bookId
             );
-            myLibrary.length = 0;
-            myLibrary.push(...filteredArr);
 
-            displayBooks();
-            });
-        cell6.appendChild(removeBtn);
-        const toggleButton = document.createElement('button');
-        toggleButton.textContent = "READ"
-        toggleButton.dataset.bookId = bookId;
-        toggleButton.addEventListener("click", ()=> {
-            const bookToToggle = myLibrary.find((book) => book.id === toggleButton.dataset.bookId);
             bookToToggle.changeStatus();
             displayBooks();
-        })
+        });
+
         cell6.appendChild(toggleButton);
         newRow.appendChild(cell6);
         tbody.appendChild(newRow);
     }
+}
 
