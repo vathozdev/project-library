@@ -95,3 +95,43 @@ td button:hover {
 td button:active {
     transform: translateY(1px);
 }
+
+form {
+    display: none;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: min(500px, 85%);
+    padding: 30px;
+    background: #ead9ad;
+    color: #3b2818;
+    border: 5px solid #4a301d;
+    box-shadow: 10px 10px 0 #3b2818;
+    text-align: left;
+    z-index: 10;
+}
+
+form::before {
+    content: "";
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    width: 100vw;
+    height: 100vh;
+    transform: translate(-50%, -50%);
+    background: rgba(45, 28, 15, 0.55);
+    z-index: -1;
+}
+
+form header {
+    margin-bottom: 25px;
+    border-bottom: 2px solid #765538;
+}
+
+form h2 {
+    margin-top: 0;
+    font-size: 24px;
+}
+
+
