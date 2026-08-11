@@ -234,7 +234,6 @@ form button[type="submit"]:hover {
 #cancel:hover {
     background: #8b2f24;
 }
-
 @media (max-width: 700px) {
     .logo {
         top: -25px;
@@ -253,7 +252,9 @@ form button[type="submit"]:hover {
 
     .container {
         width: 95%;
-        margin-top: 85px;
+        margin: 0 auto 50px;
+        padding-top: 85px;
+        text-align: center;
     }
 
     table {
@@ -288,3 +289,29 @@ form button[type="submit"]:hover {
     }
 }
 
+@media (min-width: 701px) and (max-width: 1000px) {
+    .logo {
+        top: -35px;
+        left: 8px;
+    }
+
+    .logo img {
+        width: 125px;
+        height: 125px;
+    }
+
+    .logo h1 {
+        font-size: 25px;
+    }
+
+    .container {
+        width: 92%;
+        margin: 90px auto 50px;
+    }
+
+    table {
+        display: block;
+        overflow-x: auto;
+        white-space: nowrap;
+    }
+}
