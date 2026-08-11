@@ -134,4 +134,29 @@ form h2 {
     font-size: 24px;
 }
 
+form p {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+    margin: 18px 0;
+}
 
+form label {
+    font-weight: bold;
+    font-size: 17px;
+}
+
+form input {
+    padding: 9px;
+    background: #f4e8c7;
+    color: #3b2818;
+    border: 2px solid #765538;
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: 16px;
+}
+
+form input:focus {
+    outline: none;
+    border-color: #4a301d;
+    background: #fff4d6;
+}
