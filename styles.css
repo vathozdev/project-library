@@ -23,15 +23,13 @@ body::before {
     z-index: -1;
 }
 
-.logo {
-    position: absolute;
-    top: -45px;
-    left: 10px;
-    display: flex;
-    align-items: center;
-    gap: 2px;
-    color: #3b2818;
-}
+
+.logo { 
+    display: flex; 
+    align-items: center; 
+    gap: 2px; 
+    color: #3b2818; 
+    margin-bottom: 10px; }
 
 .logo img {
     width: 150px;
