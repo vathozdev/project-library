@@ -85,8 +85,12 @@ function displayBooks() {
 
         if (book.status === false) {
             cell5.textContent = "not yet read";
+            cell5.style.color = "#8b2f24";
+            cell5.style.fontWeight = "bold";
         } else {
             cell5.textContent = "read";
+            cell5.style.color = "#2f6f3b";
+            cell5.style.fontWeight = "bold";
         }
 
         const cell6 = document.createElement("td");
