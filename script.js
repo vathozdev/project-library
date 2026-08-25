@@ -8,6 +8,10 @@ class Book {
         this.id = id;
         this.status = false;
     }
+
+    changeStatus() {
+        this.status = !this.status;
+    }
 }
 const addBookBtn = document.querySelector("#add-book");
 addBookBtn.addEventListener("click", () => {
