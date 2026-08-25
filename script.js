@@ -21,9 +21,7 @@ const cancelBtn = document.querySelector("#cancel");
 cancelBtn.addEventListener("click", () => {
     form.style.display = "none";
 })
-Book.prototype.changeStatus = function() {
-    this.status = !this.status
-}
+
 const form = document.querySelector("form");
 
 form.addEventListener("submit", (event) => { 
