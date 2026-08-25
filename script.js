@@ -1,11 +1,13 @@
 const myLibrary = [];
 const container = document.querySelector(".container");
-function Book(title, author, page, id) {
-    this.title = title;
-    this.author = author;
-    this.page = page;
-    this.id = id;
-    this.status = false;
+class Book {
+    constructor(title, author, page, id) {
+        this.title = title;
+        this.author = author;
+        this.page = page;
+        this.id = id;
+        this.status = false;
+    }
 }
 const addBookBtn = document.querySelector("#add-book");
 addBookBtn.addEventListener("click", () => {
