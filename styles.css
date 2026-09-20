@@ -395,7 +395,8 @@ input:focus:invalid {
   width: 100%;
   padding: 0;
   color: #8b2f24;
-  font-size: 13px;
+  font-size: 15px;
+  font-weight: 600;
   box-sizing: border-box;
 }
 .error.active {
