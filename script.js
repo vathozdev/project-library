@@ -142,3 +142,38 @@ function displayBooks() {
     }
 }
 
+showTitleError = () => {
+    if (titleInput.validity.valueMissing) {
+        titleError.textContent = "You need to enter a title.";
+    } else if (titleInput.validity.tooShort) {
+        titleError.textContent = `Title should be at least ${titleInput.minLength} characters; you entered ${titleInput.value.length}.`;
+    }
+    titleError.className = "error active";
+};
+
+showAuthorError = () => {
+    if (authorInput.validity.valueMissing) {
+        authorError.textContent = "You need to enter an author.";
+    } else if (authorInput.validity.tooShort) {
+        authorError.textContent = `Author should be at least ${authorInput.minLength} characters; you entered ${authorInput.value.length}.`;
+    }
+    authorError.className = "error active";
+};
+
+showPageError = () => {
+    if (pageInput.validity.valueMissing) {
+        pageError.textContent = "You need to enter a page number.";
+    } else if (pageInput.validity.rangeUnderflow) {
+        pageError.textContent = `Page number should be at least ${pageInput.min}.`;
+    } else if (pageInput.validity.rangeOverflow) {
+        pageError.textContent = `Page number should be no more than ${pageInput.max}.`;
+    }
+    pageError.className = "error active";
+};
+const titleError = document.querySelector("#title + .error");
+const authorError = document.querySelector("#author + .error");
+const pageError = document.querySelector("#page + .error");
+
+const titleInput = document.querySelector("#title");
+const authorInput = document.querySelector("#author");
+const pageInput = document.querySelector("#page");
