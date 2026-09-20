@@ -387,6 +387,7 @@ form button[type="submit"]:hover {
 }
 input:invalid {
   border-color: #8b2f24;
+  background-color: #fff0ee;
 }
 input:focus:invalid {
   outline: none;
@@ -395,9 +396,10 @@ input:focus:invalid {
   width: 100%;
   padding: 0;
   color: #8b2f24;
-  font-size: 15px;
+  font-size: 17px;
   font-weight: 600;
   box-sizing: border-box;
+  text-shadow: 1px 1px 2px white;
 }
 .error.active {
   padding: 0.3em;
