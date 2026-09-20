@@ -177,3 +177,33 @@ const pageError = document.querySelector("#page + .error");
 const titleInput = document.querySelector("#title");
 const authorInput = document.querySelector("#author");
 const pageInput = document.querySelector("#page");
+
+
+titleInput.addEventListener("input", () => {
+    if (titleInput.validity.valid) {
+        titleError.textContent = "";
+        titleError.className = "error";
+    } else {
+        showTitleError();
+    }
+});
+
+authorInput.addEventListener("input", () => {
+    if (authorInput.validity.valid) {
+        authorError.textContent = "";
+        authorError.className = "error";
+    } else {
+        showAuthorError();
+    }
+});
+
+pageInput.addEventListener("input", () => {
+    if (pageInput.validity.valid) {
+        pageError.textContent = "";
+        pageError.className = "error";
+    } else {
+        showPageError();
+    }
+}); 
+
+
